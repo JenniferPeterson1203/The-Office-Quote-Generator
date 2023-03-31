@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The "Office" Quote Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- <img class="banner" src="office-banner.jpeg" alt="The Office Banner" /> -->
+        <nav>
+          <ul>
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="quotes.html">Generate Quotes</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>The Office Quote Generator</h1>
+        <form class="form">
+          <!-- <form action="quotes.html"> -->
+          <label for="character-name">Enter character name:</label>
+          <input
+            type="text"
+            id="character-name"
+            name="characterName"
+            required
+          />
+          <button id="generate-quote" class="glow-on-hover" type="button">
+            Generate Quote
+          </button>
+        </form>
+        <div>
+          <p class="quotes"></p>
+        </div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

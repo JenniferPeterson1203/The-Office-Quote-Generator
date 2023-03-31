@@ -1,0 +1,60 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial;
+} */
+body {
+  font-family: american typewriter;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  flex-direction: column;
+  background-image: url(https://res.cloudinary.com/ybmedia/image/upload/c_crop,h_1125,w_2000,x_0,y_107/c_fill,f_auto,h_900,q_auto,w_1600/v1/m/0/5/055b4087d959e2257811f6a13934f2fb8f726f6c/other-projects-office-cast-worth-time.jpg);
+}
+.banner {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  margin: 20px;
+  /* position: fixed; */
+
+  /* object-fit: cover; */
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.main {
+  padding: 20px;
+}
+button {
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  background-color: #0074d9;
+  color: white;
+  /* justify-self: center; */
+  transition: background-color 0.3s ease-in-out;
+  font-family: american typewriter;
+}
+button:hover {
+  background-color: #003399;
+}
+.banner {
+  display: block;
+  max-width: 100%;
+}
+footer {
+  margin-top: auto;
+}
+#aboutMe {
+  color: black;
+  font-weight: bold;
+}
+#character-name {
+  font-weight: bold;
+}
