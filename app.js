@@ -34,7 +34,11 @@ form.addEventListener("submit", (event) => {
       );
     });
     let dataArr = filteredArr[Math.floor(Math.random() * filteredArr.length)];
-    generated.innerHTML = `<strong>${dataArr.character.firstname} ${dataArr.character.lastname}:<br /> ${dataArr.content}<strong>`;
+    let firstName = dataArr.character.firstname;
+    let lastName = dataArr.character.lastname;
+    let quote = dataArr.content;
+
+    generated.innerHTML = `<strong>${firstName} ${dataArr.character.lastname}:<br /> ${quote}<strong>`;
     console.log(generated);
   });
 });
