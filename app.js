@@ -14,16 +14,20 @@ async function fetchData() {
 }
 
 //access the form
-const form = document.querySelector(".form");
 //add an event listener to the form
+//check if the input/form is empty
+//if empty, alert the user to enter a character name
+const form = document.querySelector(".form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  //   console.log(event.target.characterName.value);
+  if (event.target.characterName.value.trim() === "") {
+    alert("Please enter a character name");
+    return;
+  }
+
   fetchData().then((ele) => {
     const array = ele.data;
-    // console.log(array);
     let filteredArr = array.filter((ele) => {
-      //   console.log(ele);
       return (
         ele.character.firstname ===
           event.target.characterName.value[0].toUpperCase() +
@@ -33,11 +37,14 @@ form.addEventListener("submit", (event) => {
             event.target.characterName.value.slice(1).toLowerCase()
       );
     });
+    if (filteredArr.length === 0) {
+      alert("Invalid character name");
+      return;
+    }
     let dataArr = filteredArr[Math.floor(Math.random() * filteredArr.length)];
     let firstName = dataArr.character.firstname;
     let lastName = dataArr.character.lastname;
     let quote = dataArr.content;
-
     generated.innerHTML = `<strong>${firstName} ${dataArr.character.lastname}:<br /> ${quote}<strong>`;
     console.log(generated);
   });

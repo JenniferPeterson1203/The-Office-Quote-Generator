@@ -6,8 +6,7 @@
 body {
   font-family: Arial;
 } */
-#header {
-}
+
 body {
   font-family: american typewriter;
   min-height: 100vh;
@@ -21,9 +20,6 @@ body {
   max-width: 100%;
   height: 200px;
   margin: 20px;
-  /* position: fixed; */
-
-  /* object-fit: cover; */
 }
 .container {
   display: flex;
@@ -32,17 +28,11 @@ body {
   align-items: center;
   text-align: center;
   position: absolute;
-  margin: auto;
+  margin: 20px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  /* display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-gap: 10px;
-  grid-template-rows:
-    min-content 1fr min-content
-    100px 1fr max-content; */
 }
 .main {
   padding: 20px;
@@ -54,17 +44,25 @@ button {
   border: none;
   background-color: #0074d9;
   color: white;
-  /* justify-self: center; */
+
   transition: background-color 0.3s ease-in-out;
   font-family: american typewriter;
 }
 button:hover {
-  background-color: #003399;
+  background-image: linear-gradient(
+    90deg,
+    #00c0ff 0%,
+    #ffcf00 49%,
+    #fc4f4f 80%,
+    #00c0ff 100%
+  );
+  animation: slidebg 5s linear infinite;
+  /* background-color: #003399;
+  /* width: 25%; */
+  padding-right: 24px;
+  padding-left: 8px;
 }
-.banner {
-  display: block;
-  max-width: 100%;
-}
+
 footer {
   margin-top: auto;
 }
@@ -74,4 +72,19 @@ footer {
 }
 #character-name {
   font-weight: bold;
+}
+p {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url("https://ih1.redbubble.net/image.535236356.2435/fposter,small,wall_texture,product,750x1000.jpg");
+    font-size: 0.8rem;
+  }
+  p {
+    font-size: 30px;
+  }
 }
