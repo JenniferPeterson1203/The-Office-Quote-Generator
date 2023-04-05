@@ -27,4 +27,4 @@ The web application uses the Office API to fetch quotes from the show.
 
 HTML5
 CSS3
-JavaScriptThe app.js file has been commented for better understanding of the code.
+JavaScript
