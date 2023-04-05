@@ -1,6 +1,7 @@
 let container = document.querySelector(".container");
 let main = document.querySelector;
 let generated = document.querySelector("p");
+generated.classList.add("box");
 
 //fetch data from the URL
 async function fetchData() {
@@ -45,7 +46,7 @@ form.addEventListener("submit", (event) => {
     let firstName = dataArr.character.firstname;
     let lastName = dataArr.character.lastname;
     let quote = dataArr.content;
-    generated.innerHTML = `<strong>${firstName} ${dataArr.character.lastname}:<br /> ${quote}<strong>`;
+    generated.innerHTML = `${firstName} ${dataArr.character.lastname}:<br /> ${quote}`;
     console.log(generated);
   });
 });
